@@ -9,7 +9,7 @@
 	NON_VOID -> final $TYPE*:expressionType(expr)$ $NAME:suggestVariableName()$ = $expr$;$END$
 .pwrap : (expr)
 	ANY	→  $END$($expr$);
-.assing : name = expr;
+.assign : name = expr;
 	ANY -> $NAME:suggestVariableName()$ = $expr$;$END$
 .uuid : UUID.fromString(expr)
     java.lang.String -> UUID.fromString($expr$)$END$
