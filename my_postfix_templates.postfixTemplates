@@ -1,0 +1,3 @@
+## GENERAL
+.uuid : convert String to UUID
+    java.lang.String    ->  UUID.toString($expr$);$END$
