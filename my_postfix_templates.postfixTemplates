@@ -1,3 +1,4 @@
 # GENERAL
 .uuid : convert String to UUID
-    java.lang.String    ->  UUID.toString($expr$);$END$
+    # java.lang.String    ->  UUID.toString($expr$);$END$
+    ANY -> UUID.toString($expr$);$END$
