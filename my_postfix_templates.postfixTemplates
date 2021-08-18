@@ -1,3 +1,11 @@
 # GENERAL
 .uuid : convert String to UUID
     java.lang.String -> UUID.fromString($expr$)$END$
+.var : to var
+	NON_VOID -> var $NAME:suggestVariableName()$ = $expr$;$END$
+.val: to final var
+	NON_VOID -> final var $NAME:suggestVariableName()$ = $expr$;$END$
+.def : T name = expr;
+	NON_VOID -> $TYPE:expressionType(expr)$ $NAME:suggestVariableName()$ = $expr$;$END$
+.fdef : final T name = expr;
+	NON_VOID -> final $TYPE:expressionType(expr)$ $NAME:suggestVariableName()$ = $expr$;$END$
