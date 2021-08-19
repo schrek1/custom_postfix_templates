@@ -13,6 +13,10 @@
 	ANY -> $NAME:suggestVariableName()$ = $expr$;$END$
 .uuid : UUID.fromString(expr)
     java.lang.String -> UUID.fromString($expr$)$END$
+.new : new instance
+    CLASS   →  new $expr$($END$)
+.elvis : a ? a : b
+    NON_VOID  →  $expr$ != null ? $expr$ : $END$
 
 ## Mockito ##
 .when : Mockito.when(expr)
