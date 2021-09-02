@@ -1,0 +1,3 @@
+## GENERAL ##
+.uuid : UUID.fromString(expr)
+    java.lang.String -> UUID.fromString($expr$)$END$
