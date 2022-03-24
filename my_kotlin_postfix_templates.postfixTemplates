@@ -1,3 +1,7 @@
 ## GENERAL ##
 .uuid : UUID.fromString(expr)
     java.lang.String -> UUID.fromString($expr$)$END$
+
+## PARTNERS ##
+.bindException : bindException{expr}
+    java.lang.Throwable -> bindException{$expr$}$END$
