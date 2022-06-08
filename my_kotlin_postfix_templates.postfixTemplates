@@ -4,6 +4,6 @@
 
 ## PARTNERS ##
 .bindException : bindException{expr}
-    java.lang.Throwable -> bindException{$expr}$END$
+    java.lang.Throwable -> bindException{$expr$}$END$
 .bindNull : bindExceptionIfNull(expr){}()
-    ANY -> bindExceptionIfNull($expr){$END$}
+    ANY -> bindExceptionIfNull($expr$){$END$}
