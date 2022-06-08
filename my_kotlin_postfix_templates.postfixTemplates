@@ -4,8 +4,8 @@
 
 ## PARTNERS ##
 .bindException : bindException{expr}
-    java.lang.Throwable -> bindException{$EXPR$}$END$
-.bindNull : bindExceptionIfNull(expr){}()
-    ANY -> bindExceptionIfNull($EXPR$){\
+    java.lang.Throwable -> bindException { $EXPR$ } $END$
+.bindNull : bindExceptionIfNull(expr){}
+    ANY -> bindExceptionIfNull($EXPR$) { \
                 $END$\
             }
