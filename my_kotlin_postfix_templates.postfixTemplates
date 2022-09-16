@@ -9,3 +9,7 @@
     ANY -> bindExceptionIfNull($EXPR$) { \
                 $END$\
             }
+            
+## Strikt ##
+.expectThat : expectThat(expr)
+    ANY -> strikt.api.expectThat($EXPR$)$END$
