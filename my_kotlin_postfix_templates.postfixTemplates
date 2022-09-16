@@ -1,15 +1,15 @@
 ## GENERAL ##
 .uuid : UUID.fromString(expr)
-    java.lang.String -> java.util.UUID.fromString($EXPR$)$END$
+    java.lang.String -> java.util.UUID.fromString($expr$)$END$
 
 ## PARTNERS ##
 .bindException : bindException{expr}
-    java.lang.Throwable -> bindException { $EXPR$ } $END$
+    java.lang.Throwable -> bindException { $expr$ } $END$
 .bindNull : bindExceptionIfNull(expr){}
-    ANY -> bindExceptionIfNull($EXPR$) { \
+    ANY -> bindExceptionIfNull($expr$) { \
                 $END$\
             }
             
 ## Strikt ##
 .expectThat : expectThat(expr)
-    ANY -> strikt.api.expectThat($EXPR$)$END$
+    ANY -> strikt.api.expectThat($expr$)$END$
