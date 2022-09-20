@@ -13,3 +13,9 @@
 ## Strikt ##
 .expectThat : expectThat(expr)
     ANY -> strikt.api.expectThat($expr$)$END$
+
+## MockK ##
+.every : every{expr}
+    ANY -> io.mockk.every($expr$)$END$
+.cevery : coEvery{expr}
+    ANY -> io.mockk.coEvery($expr$)$END$
