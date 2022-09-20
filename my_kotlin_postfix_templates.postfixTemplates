@@ -23,5 +23,7 @@
     ANY -> io.mockk.verify(exactly = 1){$expr$}$END$
 .cverify : coVerify(exactly = 1){expr}
     ANY -> io.mockk.coVerify(exactly = 1){$expr$}$END$
-.slot   : val name = slot<$expr$>()$END$
+.slot   : val name = slot<$expr$>()
     ANY -> val $NAME:suggestVariableName()$ = slot<$expr$>()$END$
+.capture : capture($expr$)
+    ANY -> io.mockk.capture($expr$)$END$
