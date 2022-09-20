@@ -26,4 +26,4 @@
 .slot   : val name = slot<$expr$>()
     ANY -> val $NAME:suggestVariableName()$ = slot<$expr$>()$END$
 .capture : capture($expr$)
-    ANY -> io.mockk.capture($expr$)$END$
+    ANY -> io.mockk.MockKMatcherScope.capture($expr$)$END$
