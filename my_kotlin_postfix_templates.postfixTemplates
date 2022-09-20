@@ -20,6 +20,6 @@
 .cevery : coEvery{expr}
     ANY -> io.mockk.coEvery{$expr$}$END$
 .verify : verify{expr}
-    ANY -> io.mockk.verify{$expr$}$END$
-.cverify : coVerify{expr}
-    ANY -> io.mockk.coVerify{$expr$}$END$
+    ANY -> io.mockk.verify(exactly = 1){$expr$}$END$
+.cverify : coVerify(exactly = 1){expr}
+    ANY -> io.mockk.coVerify(exactly = 1){$expr$}$END$
