@@ -27,3 +27,5 @@
     ANY -> val $NAME:suggestVariableName()$ = slot<$expr$>()$END$
 .capture : capture($expr$)
     ANY -> capture($expr$)$END$
+.get : get{$expr$}
+    ANY -> get{$expr$}$END$
