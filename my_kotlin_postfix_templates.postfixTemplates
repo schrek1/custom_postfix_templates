@@ -19,3 +19,7 @@
     ANY -> io.mockk.every{$expr$}$END$
 .cevery : coEvery{expr}
     ANY -> io.mockk.coEvery{$expr$}$END$
+.verify : verify{expr}
+    ANY -> io.mockk.verify{$expr$}$END$
+.cverify : coVerify{expr}
+    ANY -> io.mockk.coVerify{$expr$}$END$
