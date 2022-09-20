@@ -16,6 +16,6 @@
 
 ## MockK ##
 .every : every{expr}
-    ANY -> io.mockk.every($expr$)$END$
+    ANY -> io.mockk.every{$expr$}$END$
 .cevery : coEvery{expr}
-    ANY -> io.mockk.coEvery($expr$)$END$
+    ANY -> io.mockk.coEvery{$expr$}$END$
