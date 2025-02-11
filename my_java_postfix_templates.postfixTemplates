@@ -1,6 +1,8 @@
 ## GENERAL ##
 .var : var name = expr;
 	NON_VOID -> var $NAME:suggestVariableName()$ = $expr$;$END$
+.lval: lombok val name = expr;
+	NON_VOID -> lombok.val $NAME:suggestVariableName()$ = $expr$;$END$
 .val: final var name = expr;
 	NON_VOID -> final var $NAME:suggestVariableName()$ = $expr$;$END$
 .def : T name = expr;
