@@ -1,8 +1,6 @@
 ## GENERAL ##
 .var : var name = expr;
 	NON_VOID -> var $NAME:suggestVariableName()$ = $expr$;$END$
-.lval: lombok val name = expr;
-	NON_VOID -> lombok.val $NAME:suggestVariableName()$ = $expr$;$END$
 .val: final var name = expr;
 	NON_VOID -> final var $NAME:suggestVariableName()$ = $expr$;$END$
 .def : T name = expr;
@@ -19,6 +17,11 @@
     	CLASS   →  new $expr$($END$)
 .elvis : a ? a : b
     	NON_VOID  →  $expr$ != null ? $expr$ : $END$
+
+## Lombok ##
+
+.lval: lombok val name = expr;
+	NON_VOID -> lombok.val $NAME:suggestVariableName()$ = $expr$;$END$ [USE_STATIC_IMPORTS]
 
 ## Mockito ##
 .when : Mockito.when(expr)
